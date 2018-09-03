@@ -1,5 +1,10 @@
 # TDTableViewHeaderPager
 
+
+## Demo
+
+![title](https://github.com/thedahiyaboy/TDTableViewHeaderPager/blob/master/Gifs/1.gif) ![title](https://github.com/thedahiyaboy/TDTableViewHeaderPager/blob/master/Gifs/2.gif)
+
 ## Overview
 The basic moto of the project is to create horizontal scrollable header at the top of `UITableView` like a pager. Pager is managed with the header of the `UITableView` & vice-versa.
 
@@ -455,9 +460,4 @@ func addShadow(){
     pagerCollectionView.layer.masksToBounds = false
 }
 ```
-
-
-## Final output
-
-![title](https://github.com/thedahiyaboy/TDTableViewHeaderPager/blob/master/Gifs/1.gif)  ![title](https://github.com/thedahiyaboy/TDTableViewHeaderPager/blob/master/Gifs/2.gif)
 
