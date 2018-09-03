@@ -439,7 +439,7 @@ func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPat
 2. Move the `UICollectionView` for the selected index.
 3. Move the `UITableView` for the selected index. I used `.top` so that selected header will shown be at the top of the `UITableView`.
 
-- **Now our project ius ready but to make it litle attractive I just added shadow at `UICollectionView`. Now make just do litle more change.**
+- **Now our project is ready but to make it litle more attractive I just added shadow at `UICollectionView`. Now make just do litle more change.**
 
 ```
 override func viewDidLoad() {
