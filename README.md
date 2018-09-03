@@ -66,33 +66,33 @@ func getLocalJsonData()  {
 
 
 ```
-    func setupMetadata() {
+func setupMetadata() {
+    
+    var index = 0  // 1
+    for section in 0...localJsonData.count-1 {
         
-        var index = 0  // 1
-        for section in 0...localJsonData.count-1 {
+        // 2
+        let metadataSection = CellMetadata(index: index, section: section, row: -1, isHeader: true)
+        allCellMetadata.append(metadataSection)
+        index += 1
         
-            // 2
-            let metadataSection = CellMetadata(index: index, section: section, row: -1, isHeader: true)
-            allCellMetadata.append(metadataSection)
+        // 3
+        let sectionData = localJsonData[section] as! [String : Any]
+        let rowData = sectionData["data"] as! [Any]
+        
+        // 4
+        if rowData.isEmpty{
+            continue
+        }
+        
+        // 5
+        for row in 0...rowData.count-1{
+            let metadataRow = CellMetadata(index: index, section: section, row: row, isHeader: false)
+            allCellMetadata.append(metadataRow)
             index += 1
-            
-            // 3
-            let sectionData = localJsonData[section] as! [String : Any] 
-            let rowData = sectionData["data"] as! [Any]
-            
-            // 4
-            if rowData.isEmpty{
-                continue
-            }
-            
-            // 5
-            for row in 0...rowData.count-1{
-                let metadataRow = CellMetadata(index: index, section: section, row: row, isHeader: false)
-                allCellMetadata.append(metadataRow)
-                index += 1
-            }
         }
     }
+}
 
 ```
 
